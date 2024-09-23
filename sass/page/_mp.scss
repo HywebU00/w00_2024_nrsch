@@ -576,9 +576,9 @@ section {
 }
 .topGrp {
   position: relative;
-  margin-top: 40px;
+  margin: 70px 20px 0 15px;
   @media screen and (max-width: 1670px) {
-    margin: 70px 130px 0 15px;
+    margin: 70px 90px 0 15px;
   }
 
   @include screen('notebook') {
