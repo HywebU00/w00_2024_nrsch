@@ -1,0 +1,25 @@
+.breadcrumb {
+  // border-bottom: 1px solid #eee;
+  padding: 0.1em 0em 0.1em 22px;
+  font-size: 0.9338em;
+  margin: 0px auto 5px;
+  background: url(../images/icon_home.png) no-repeat left center;
+  background-size: 18px auto;
+  ul {
+    @include liReset;
+    display: flex;
+    flex-flow: row wrap;
+    li {
+      margin: 0px 0.1em 0.1em 0px;
+      color: $colorPrimary;
+      & + li {
+        &:before {
+          @extend %slash;
+        }
+      }
+    }
+  }
+  a {
+    @include aSetting($colorWord);
+  }
+}

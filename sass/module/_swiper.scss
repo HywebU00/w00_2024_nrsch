@@ -1,0 +1,424 @@
+:root {
+  --dotSize: 15px;
+}
+
+.cpSlider {
+  padding: 1em 0;
+}
+
+.swiperBox {
+  position: relative;
+}
+
+.swiper {
+  img {
+    display: block;
+  }
+}
+
+.swiperDots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+
+  .swiper-pagination-bullet {
+    /* 點的顏色 */
+    background: #b0aa9c;
+    opacity: 0.4;
+    width: var(--dotSize);
+    height: var(--dotSize);
+    border-radius: 50%;
+
+    &:hover,
+    &:focus-visible {
+      opacity: 1;
+      /* 點hover的顏色 */
+      background: #21baff;
+    }
+
+    &:focus-visible {
+      opacity: 1;
+      /* 點focus的顏色 */
+      background: #ff3e4d;
+      // box-shadow: 0px 0px 0px 1px #ff3e4d; /* 讓focus過去的點大一些 */
+    }
+
+    &.swiper-pagination-bullet-active {
+      opacity: 1;
+      /* 點 active 的顏色 */
+      background: $aHover;
+
+      &:hover {
+        /* 點 active  hover的顏色 */
+        background: #ff3e4d;
+      }
+
+      &:focus-visible {
+        /* 點 active  focus的顏色 */
+        background: #ff3e4d;
+      }
+    }
+
+    &.noFonts {
+      font-size: 0;
+    }
+  }
+}
+
+.swiperArrow {
+  position: absolute;
+  cursor: pointer;
+  top: 45%;
+  transform: translateY(-50%);
+  padding: 15px 10px;
+  margin: 0;
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.8);
+  border: none;
+  z-index: 99;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+
+  &::before {
+    content: '';
+    width: 35px;
+    height: 30px;
+    display: block;
+    background: url('../images/ar.svg') no-repeat left center;
+    filter: invert(1);
+  }
+
+  &.prevSlider {
+    left: 0px;
+    &::before {
+      transform: rotate(0deg);
+      content: '';
+      width: 35px;
+      height: 30px;
+      display: block;
+      background: url('../images/ar.svg') no-repeat right center;
+      filter: invert(1);
+    }
+  }
+
+  &.nextSlider {
+    right: 0px;
+    &::before {
+      transform: rotate(180deg);
+      content: '';
+      width: 40px;
+      height: 30px;
+      display: block;
+      background: url('../images/ar.svg') no-repeat left center;
+      filter: invert(1);
+    }
+  }
+
+  &.swiperArrow-disabled {
+    opacity: 0.7;
+  }
+  @include screen('tablet') {
+    width: 56px;
+    height: 56px;
+    padding: 5px;
+
+    &::before {
+      content: '';
+      width: 28px !important;
+      height: 24px !important;
+      display: block;
+      background: url('../images/ar.svg') no-repeat left center;
+      filter: invert(1);
+    }
+  }
+}
+
+.cpSlider .swiper {
+  margin: 0 40px;
+  background: #fff;
+  overflow: hidden;
+
+  h3 {
+    font-size: 1.5em;
+    padding: 12px 0px 15px 0px;
+    margin: 0.5em 0px 1.2em;
+    border-bottom: 1px solid $colorPrimary;
+  }
+
+  .cpSlider {
+    @include gutter;
+  }
+
+  .imgContainer {
+    @include aspectRatio(4, 3);
+    overflow: hidden;
+  }
+
+  .caption {
+    padding: 0.5em;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    bottom: -2em;
+    left: 0;
+    font-size: 0.938em;
+    height: 2em;
+    line-height: 1;
+    width: 100%;
+    @include textOverflow;
+    transition: 0.3s ease-out;
+  }
+
+  a {
+    color: #555;
+    display: block;
+
+    &:hover,
+    &:focus-visible {
+      .caption {
+        bottom: 0;
+      }
+    }
+  }
+
+  .swiperArrow {
+    padding: 0;
+  }
+}
+
+.navSlider {
+  position: relative;
+
+  .swiper-slide {
+    max-height: 180px;
+
+    a {
+      position: relative;
+      display: block;
+
+      &:focus::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 9;
+        border: 2px solid red;
+      }
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.adSlider {
+  clear: both;
+  @media screen and (max-width: 1500px) {
+    width: calc(100% - 100px);
+  }
+  @include screen('tablet') {
+    width: calc(100% - 0px);
+  }
+  .swiper-slide {
+  }
+
+  a {
+    @include aspectRatio(16, 6);
+    display: block;
+    padding: 5px;
+    img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.05);
+      background: #fff;
+      object-fit: fill !important;
+    }
+  }
+  .swiperArrow {
+    padding: 15px 5px 5px 5px;
+    width: 56px;
+    height: 56px;
+    top: 35%;
+    &:before {
+      width: 30px;
+      height: 25px;
+    }
+  }
+}
+.mpSlider {
+  .swiper {
+  }
+  .swiperDots {
+    margin-top: 0;
+  }
+  .imgContainer {
+    @include aspectRatio(16, 6);
+    overflow: hidden;
+    margin-bottom: 30px;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .caption {
+    position: absolute;
+    width: 100%;
+    height: 3em;
+    line-height: 3em;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 0 1em;
+    font-size: 1.25em;
+    color: #fff;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    text-align: center;
+    @include textOverflow;
+    box-sizing: border-box;
+
+    @include screen('mobile') {
+      width: 100%;
+      height: 2em;
+      line-height: 2em;
+      left: 0;
+      padding: 0 1em;
+    }
+  }
+  .swiperArrow {
+    &::before {
+      content: '';
+      width: 35px;
+      height: 30px;
+      display: block;
+      background: url('../images/ar.svg') no-repeat left center;
+      filter: invert(1);
+    }
+
+    &.prevSlider {
+      left: -35px;
+      &::before {
+        transform: rotate(0deg);
+        content: '';
+        width: 32px;
+        height: 30px;
+        display: block;
+        background: url('../images/ar.svg') no-repeat right center;
+        filter: invert(1);
+      }
+      @include screen('tablet') {
+        left: -20px;
+      }
+      @include screen('tablet') {
+        left: -20px;
+      }
+      @include screen('mobile') {
+        left: -20px;
+      }
+    }
+
+    &.nextSlider {
+      right: -36px;
+      @include screen('tablet') {
+        right: -25px;
+      }
+      @include screen('mobile') {
+        right: -20px;
+      }
+    }
+  }
+}
+
+.videoSlider {
+  clear: both;
+  margin: 5em 0 2em 0;
+  @media screen and (max-width: 1500px) {
+    width: calc(100% - 100px);
+  }
+  @include screen('tablet') {
+    width: calc(100% - 0px);
+  }
+  @include screen('mobile') {
+    margin: 1em 0 2em 0;
+  }
+  .container {
+    // border: solid 1px #c00;
+  }
+  .titleBox {
+    display: inline-block;
+    margin: 2em 0 2em -3.5em;
+    position: relative;
+    text-align: center;
+    left: 50%;
+    @include screen('mobile') {
+      margin: 1em 0 1em -3.2em;
+    }
+  }
+  .swiperBox {
+    margin: 0 12px 2em;
+  }
+  .swiper-slide {
+  }
+  a {
+    display: block;
+    padding: 0;
+    position: relative;
+    border-radius: 10px;
+
+    &:after {
+      content: '';
+      width: 100%;
+      height: calc(100% - 2.5em);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+    }
+    img {
+      width: 100%;
+      @include aspectRatio(16, 9);
+      border-radius: 10px;
+      background: #fff;
+      object-fit: fill !important;
+    }
+    p {
+      color: $colorWord;
+      font-size: rem(18);
+      text-align: center;
+      font-weight: bold;
+      @include textOverflow;
+    }
+    &:hover,
+    &:focus-visible {
+      &:after {
+        background: rgba(0, 0, 0, 0);
+      }
+      p {
+        color: $aHover;
+      }
+    }
+  }
+  .swiperArrow {
+    padding: 20px 5px 5px 5px;
+    // width: 56px;
+    // height: 56px;
+    top: 60%;
+    &:before {
+      // width: 30px;
+      // height: 25px;
+    }
+    @include screen('tablet') {
+      padding: 15px 5px 5px 5px;
+    }
+    @include screen('mobile') {
+      top: 50%;
+    }
+  }
+}
