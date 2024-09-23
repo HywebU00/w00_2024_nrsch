@@ -296,7 +296,7 @@
     display: none;
   }
   @media screen and (min-width: 1700px) {
-    padding-bottom: 10px;
+    padding-bottom: 0;
   }
   @include screen('notebook') {
     padding-bottom: 20px;
