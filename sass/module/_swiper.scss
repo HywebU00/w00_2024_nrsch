@@ -258,7 +258,7 @@
     margin-top: 0;
   }
   .imgContainer {
-    @include aspectRatio(16, 6);
+    @include aspectRatio(16, 7);
     overflow: hidden;
     margin-bottom: 30px;
     img {
