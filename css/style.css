@@ -2858,8 +2858,8 @@ img {
   }
   @media screen and (max-width: 767px) {
     .innerPageSearch {
-      position: fixed;
-      top: 60px;
+      position: absolute;
+      top: -15px;
       margin-top: 0;
     }
   }
@@ -3127,13 +3127,13 @@ img {
   .btnSecondary {
     background: #fff;
     color: #753924;
-    border: solid 1px #af5636;
+    border: solid 1px #ccc;
     text-shadow: none;
   }
   .btnSecondary:hover, .btnSecondary:focus-visible {
     color: #3a1d12;
-    background: #b5deff;
-    border: solid 1px #b5deff;
+    background: #ddd;
+    border: solid 1px #ccc;
   }
   .btnNormal {
     background: #f1f1f1;
@@ -3907,7 +3907,6 @@ img {
   }
   @media screen and (max-width: 991px) {
     .category a {
-      font-size: 1rem;
       padding: 0.6em 0.5em;
     }
   }
@@ -6602,7 +6601,7 @@ img {
   table.tableSprite tr:nth-child(even) {
     background: #f5f5f5;
   }
-  @media screen and (max-width: 575px) {
+  @media screen and (max-width: 767px) {
     .tableList {
       background-color: transparent;
     }
@@ -6875,6 +6874,126 @@ img {
     color: #aaa;
     font-size: 0.938em;
     font-weight: normal;
+  }
+  .img_list {
+    margin: 0 1em;
+  }
+  .img_list ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .img_list ul li {
+    background: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    padding: 0;
+    margin-bottom: 1em;
+    position: relative;
+    border-radius: 10px;
+  }
+  .img_list ul li iframe {
+    width: 100% !important;
+    height: 240px !important;
+    margin: 0;
+    padding: 0;
+  }
+  .img_list ul li .img-container {
+    height: 240px;
+    flex: 0 1 40%;
+    margin: 0;
+  }
+  @media screen and (max-width: 767px) {
+    .img_list ul li .img-container {
+      float: none;
+      flex: 1 1 100%;
+      margin: 0;
+      height: 200px !important;
+    }
+    .img_list ul li .img-container iframe {
+      height: 200px !important;
+    }
+  }
+  .img_list ul li .infotb {
+    margin: 2em 0;
+    flex: 1 1 60%;
+  }
+  .img_list ul li .infotb table {
+    border: none;
+    font-size: 0.938em;
+    width: calc(100% - 3em);
+    margin: 0 1.5em;
+  }
+  .img_list ul li .infotb table th,
+  .img_list ul li .infotb table td {
+    padding: 5px;
+    background: #fff;
+    border-radius: 0;
+    border-bottom: solid 1px #ddd;
+  }
+  .img_list ul li .infotb table th {
+    width: 6em;
+    color: #251f0c;
+    text-align: right;
+    font-weight: normal;
+    vertical-align: top;
+  }
+  .img_list ul li .infotb table td {
+    text-align: left;
+  }
+  .img_list ul li a {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .img_list ul li a:hover, .img_list ul li a:focus {
+    color: #9e4d31;
+  }
+  .img_list ul li h3 {
+    font-size: 1.75em;
+    color: #333;
+    font-family: "Noto Serif TC", serif;
+    line-height: 1.25em;
+    overflow: hidden;
+    display: block;
+    margin: 0 0 0.5em;
+    padding-top: 0.5em;
+  }
+  @media screen and (max-width: 575px) {
+    .img_list ul li h3 {
+      width: 90%;
+      margin: 0 auto 1em;
+    }
+  }
+  .img_list ul li .publish_time {
+    overflow: hidden;
+    display: block;
+    color: #555;
+    font-size: 0.813rem;
+  }
+  .img_list ul li .publish_time time {
+    display: inline-block;
+    color: #555;
+    margin-left: 1em;
+  }
+  @media screen and (max-width: 575px) {
+    .img_list ul li .publish_time {
+      width: 90%;
+      margin: 0 auto 1em;
+    }
+  }
+  .img_list ul li p {
+    max-height: 4.5em;
+    line-height: 1.5em;
+    display: block;
+    font-size: 0.875rem;
+    overflow: hidden;
+    color: #555;
+  }
+  @media screen and (max-width: 575px) {
+    .img_list ul li p {
+      width: 90%;
+      margin: 0 auto 3em;
+    }
   }
   .submenu ul,
   .submenu ol {
@@ -7428,7 +7547,7 @@ img {
     color: #7cb52f;
   }
   .pagination {
-    margin: 0.5em auto;
+    margin: 0.5em auto 1em;
     padding: 0;
     display: block;
     text-align: center;
@@ -7454,8 +7573,8 @@ img {
     box-sizing: border-box;
   }
   .pagination .page li a {
-    min-width: 40px;
-    height: 40px;
+    min-width: 36px;
+    height: 36px;
     border-radius: 50%;
     padding: 6px 10px;
     font-weight: 700;
@@ -7465,7 +7584,7 @@ img {
     color: #251f0c;
     background: #eee;
     border: #ccc solid 1px;
-    margin: 0 0.1em 0.25em;
+    margin: 0 0.1em 0em;
   }
   .pagination .page li a:hover, .pagination .page li a:focus-visible {
     background: #af5636;
@@ -10244,7 +10363,7 @@ img {
     font-size: 0.875em;
     line-height: 1.5em;
     vertical-align: middle;
-    color: #666;
+    color: #555;
   }
   .fileDownload li .fileName ~ span a {
     color: #fff;
@@ -10562,14 +10681,20 @@ img {
   }
   .rightBlock {
     display: flex;
+    flex-wrap: wrap;
   }
   .rightBlock h3 {
     flex: 1 1 auto;
     border-left: solid 5px #af5636;
     padding-left: 0.5em;
   }
+  @media screen and (max-width: 767px) {
+    .rightBlock h3 {
+      flex: 1 1 100%;
+    }
+  }
   .rightBlock .formGrp {
-    flex: 0 0 30%;
+    flex: 0 0 40%;
   }
   .rightBlock .formGrp label {
     display: none;
@@ -10580,7 +10705,26 @@ img {
   }
   @media screen and (max-width: 767px) {
     .rightBlock .formGrp {
-      flex: 0 0 60%;
+      flex: 1 1 100%;
+    }
+  }
+  .rightBlock2 {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .rightBlock2 .formGrp {
+    flex: 0 0 40%;
+  }
+  .rightBlock2 .formGrp label {
+    display: block;
+  }
+  .rightBlock2 .formGrp select,
+  .rightBlock2 .formGrp input {
+    width: calc(100% - 10em);
+  }
+  @media screen and (max-width: 991px) {
+    .rightBlock2 .formGrp {
+      flex: 1 1 auto !important;
     }
   }
   .chief {
@@ -10703,6 +10847,806 @@ img {
     font-size: 1rem;
     margin: 1em 0;
     padding: 1em;
+  }
+  .searchbtn {
+    min-width: 10em;
+  }
+  .f_download {
+    margin: 2rem 0;
+  }
+  .f_download .col {
+    flex-basis: calc(50% - 15px);
+    max-width: calc(50% - 15px);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.15);
+  }
+  @media screen and (max-width: 767px) {
+    .f_download .col {
+      flex-basis: calc(100% - 15px);
+      max-width: calc(100% - 15px);
+      margin-bottom: 2rem;
+    }
+  }
+  .f_download .col:nth-child(1) {
+    background: url(../images/f_download_bg1.png) no-repeat left top;
+    background-size: auto 10em;
+  }
+  .f_download .col:nth-child(2) {
+    background: url(../images/f_download_bg2.png) no-repeat left top;
+    background-size: auto 9em;
+  }
+  .f_download h3 {
+    border: none;
+    padding: 0;
+    color: #af5636;
+    margin: 10rem 1rem 0.5rem;
+  }
+  .f_download ul {
+    list-style: none;
+    margin: 1rem 1rem 2rem;
+    padding: 0;
+  }
+  .f_download ul li {
+    position: relative;
+  }
+  .f_download ul li a {
+    display: block;
+    padding: 0.6rem 1.5rem 0.6rem 0.2rem;
+    border-bottom: solid 1px #d3d3d3;
+    font-weight: bold;
+    color: #251f0c;
+  }
+  .f_download ul li a:after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    margin-left: 0.5em;
+    vertical-align: middle;
+    border: 2px solid #726025;
+    transform: rotate(45deg);
+    border-bottom: none;
+    border-left: none;
+    margin-bottom: 0.3em;
+    z-index: 1;
+    position: absolute;
+    right: 0.5rem;
+    top: 1.1rem;
+  }
+  .f_download ul li a:hover, .f_download ul li a:focus-visible {
+    color: #9e4d31;
+  }
+  .events .formGrp {
+    flex-wrap: nowrap;
+    display: flex;
+  }
+  @media screen and (max-width: 767px) {
+    .events .formGrp {
+      flex-wrap: wrap;
+    }
+  }
+  .events .formGrp label {
+    flex: 0 0 6em;
+    margin: 0;
+  }
+  .events .formGrp select {
+    flex: 1 1 auto;
+  }
+  @media screen and (max-width: 991px) {
+    .events .formGrp select {
+      flex: 1 1 calc(100% - 12em);
+      max-width: 60%;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .events .formGrp select {
+      flex: 1 1 calc(100% - 5em);
+      max-width: 60%;
+    }
+  }
+  .totalAmount {
+    border-radius: 4px;
+    background-color: #ececec;
+    padding: 0.5em 1em;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.125rem;
+    margin: 1em 0;
+    font-weight: bold;
+  }
+  .totalAmount span {
+    margin: 0 0.5em;
+    display: inline-block;
+    color: #d30000;
+  }
+  .hideDisabled label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .calendarTB {
+    margin: 0 0 20px;
+  }
+  .calendarTB table {
+    word-break: break-all;
+    table-layout: fixed;
+    margin-bottom: 1em;
+  }
+  @media screen and (max-width: 767px) {
+    .calendarTB table {
+      border-bottom: none;
+    }
+  }
+  .calendarTB table thead {
+    margin-bottom: 5px;
+  }
+  .calendarTB table tbody {
+    border-top: 1px solid #bcbcbc;
+  }
+  .calendarTB table tr {
+    background-color: #fff;
+  }
+  .calendarTB table tr:hover {
+    transition: 0.2s;
+  }
+  .calendarTB table th {
+    background-color: #fff !important;
+    border: 0px solid #f8f3e4;
+    border-bottom: 1px solid #bcbcbc;
+    color: #434e0d;
+    padding: 1em 0;
+    width: 10%;
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: center;
+  }
+  .calendarTB table th.weekend {
+    background-color: #fff !important;
+    color: #97928d;
+  }
+  .calendarTB table th:first-child {
+    width: 5%;
+    padding: 0;
+  }
+  .calendarTB table th:last-child {
+    width: 5%;
+    padding: 0;
+  }
+  .calendarTB table td {
+    position: relative;
+    border: 1px solid #bcbcbc;
+    padding: 2px;
+  }
+  .calendarTB table td:first-child {
+    border-left: none;
+  }
+  .calendarTB table td:last-child {
+    border-right: none;
+  }
+  @media screen and (max-width: 767px) {
+    .calendarTB table td {
+      min-height: 65px;
+      border: 1px solid #ddd;
+      padding: 2px 7px 2px 5.5em !important;
+    }
+  }
+  .calendarTB table td:before {
+    position: absolute;
+    width: 5.5em;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 5px;
+    background-color: #eee;
+    color: #333;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: bold;
+    box-sizing: border-box;
+  }
+  .calendarTB table td.otherMonth .numDate {
+    color: #d5d5d5;
+  }
+  @media screen and (max-width: 767px) {
+    .calendarTB table td.otherMonth {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .calendarTB table td:last-child {
+      display: none;
+    }
+  }
+  .calendarTB table .numDate {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: bold;
+    width: 100%;
+    margin: 1rem 0;
+  }
+  @media screen and (max-width: 767px) {
+    .calendarTB table .numDate {
+      position: absolute;
+      text-align: center;
+      right: 0;
+      left: 0;
+      top: 30px;
+      width: 15%;
+      border: none;
+    }
+  }
+  .calendarTB .periodContent {
+    margin: 0px 0 0;
+    text-align: center;
+  }
+  .calendarTB .periodContent .applyPeriod {
+    background: #f6f4f1;
+    padding: 2em 0.5em;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    margin: 5px;
+  }
+  @media screen and (max-width: 767px) {
+    .calendarTB .periodContent .applyPeriod {
+      padding: 1em 0.5em;
+    }
+  }
+  .calendarTB .periodContent .applyPeriod.disabled {
+    background-color: #fff;
+    color: #af5636;
+    opacity: 1;
+  }
+  .calendarTB .periodContent .applyPeriod.disabled .time {
+    border-bottom: 1px dotted rgb(255, 255, 255);
+  }
+  .calendarTB .periodContent .applyPeriod span {
+    display: block;
+  }
+  .calendarTB .periodContent .applyPeriod .time {
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+  }
+  .calendarTB .periodContent .applyPeriod .quota {
+    font-size: 1.25rem;
+  }
+  .calendarTB .periodContent .applyPeriod .quota em {
+    font-style: normal;
+    padding: 0 3px;
+    color: #af5636;
+    font-weight: bold;
+  }
+  .calendarTB .periodContent .applyPeriod .btnGrp {
+    padding: 0;
+    margin-top: 5px;
+    justify-content: center;
+  }
+  .calendarTB .periodContent .applyPeriod .btn {
+    padding: 0.25em;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  @media screen and (max-width: 991px) {
+    .calendarTB .periodContent .applyPeriod .btn {
+      font-size: 1.125rem;
+    }
+  }
+  .calendarTB .notopen {
+    padding: 0 0.5em;
+    margin: 5px 0 10px;
+    color: #707070;
+  }
+  .calendarTB .prev,
+  .calendarTB .next {
+    font-size: 0;
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 50%;
+  }
+  .calendarTB .prev:hover,
+  .calendarTB .next:hover {
+    opacity: 1;
+  }
+  .calendarTB .prev {
+    background: #4c4c4c url(../images/icon/icon_arrow_left.svg) center no-repeat;
+    background-size: 1.5rem;
+    left: 0;
+  }
+  .calendarTB .next {
+    background: #4c4c4c url(../images/icon/icon_arrow_right.svg) center no-repeat;
+    background-size: 1.5rem;
+    right: 0;
+  }
+  .serviceApply {
+    background: #fff url(../images/paperbg01.png);
+    padding: 1em 2em;
+    margin-bottom: 1em;
+  }
+  @media screen and (max-width: 767px) {
+    .serviceApply {
+      padding: 1em 15px;
+    }
+  }
+  .serviceApply .title {
+    text-align: center;
+    font-size: 2em;
+  }
+  .serviceApply .dateSelect {
+    font-size: 1.5rem;
+    background: #fff;
+  }
+  @media screen and (max-width: 767px) {
+    .serviceApply .dateSelect {
+      flex-wrap: wrap;
+      padding: 0 1em;
+      border: none;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .serviceApply .dateSelect .prev,
+    .serviceApply .dateSelect .next {
+      position: relative;
+      display: none;
+    }
+  }
+  .serviceApply .dateSelect .dateRange {
+    margin: 0 10px;
+  }
+  .serviceApply .dateSelect .dateRange + .dateRange::before {
+    content: "-";
+    display: inline-block;
+    margin-right: 20px;
+  }
+  @media screen and (max-width: 767px) {
+    .serviceApply .dateSelect .dateRange + .dateRange {
+      padding-top: 20px;
+      position: relative;
+    }
+    .serviceApply .dateSelect .dateRange + .dateRange::before {
+      position: absolute;
+      top: -4px;
+      left: 50%;
+      margin-right: 0;
+      transform: rotate(90deg);
+    }
+  }
+  .serviceApply .dateSelect .dateRange span {
+    color: #af5636;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  .modal {
+    border-radius: 10px;
+  }
+  .modal .modalTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+  .listModal .applyList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .listModal .applyList li {
+    display: flex;
+    padding: 0.8em 0;
+    border-bottom: 1px dashed #ccc;
+  }
+  .listModal .applyList li:first-of-type {
+    border-top: 1px dashed #ccc;
+  }
+  .listModal .applyList li span {
+    display: block;
+    margin: 0 1em;
+  }
+  .applyModal {
+    width: 800px;
+    max-width: 98%;
+    padding: 30px 15px !important;
+  }
+  .orgChart {
+    font-size: 1rem;
+    overflow: hidden;
+  }
+  .orgChart ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  @media screen and (max-width: 767px) {
+    .orgChart ul {
+      display: block;
+    }
+  }
+  .orgChart ul li {
+    position: relative;
+    padding-top: 30px;
+  }
+  @media screen and (max-width: 767px) {
+    .orgChart ul li {
+      padding-top: 0;
+    }
+  }
+  .orgChart ul li:before, .orgChart ul li:after {
+    box-sizing: border-box;
+  }
+  .orgChart ul a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    min-height: 60px;
+    background-color: #ececec;
+    margin: 0 5px 30px;
+    text-align: center;
+    border-radius: 4px;
+    color: #251f0c;
+    transition: 0.3s;
+  }
+  .orgChart ul a:hover {
+    filter: brightness(95%);
+  }
+  @media screen and (max-width: 767px) {
+    .orgChart ul a {
+      margin-bottom: 15px;
+    }
+  }
+  .orgChart .administration > li > a,
+  .orgChart .director > li > a {
+    width: 30%;
+    margin: 0 auto 30px;
+    background-color: #d3a290;
+  }
+  @media screen and (max-width: 767px) {
+    .orgChart .administration > li > a,
+    .orgChart .director > li > a {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+  .orgChart .administration > li > a {
+    position: relative;
+  }
+  .orgChart .administration > li > a:before {
+    content: "";
+    position: absolute;
+    left: calc(50% - 1px);
+    top: 100%;
+    width: 3px;
+    height: 30px;
+    background-color: #dbb3a5;
+  }
+  @media screen and (max-width: 767px) {
+    .orgChart .administration > li > a:before {
+      left: 15px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .orgChart .director ul {
+      padding-left: 30px;
+    }
+    .orgChart .director ul li:before {
+      content: "";
+      position: absolute;
+      left: -15px;
+      top: -15px;
+      width: 3px;
+      height: calc(100% + 15px);
+      background-color: #8ec6c9;
+    }
+    .orgChart .director ul li:last-of-type:before {
+      content: "";
+      height: calc(50% + 15px);
+    }
+    .orgChart .director ul li a {
+      position: relative;
+    }
+    .orgChart .director ul li a:before {
+      content: "";
+      position: absolute;
+      top: calc(-50% - 30px);
+      left: -20px;
+      width: 20px;
+      height: calc(100% + 30px);
+      border-bottom: 3px solid #dbb3a5;
+      box-sizing: border-box;
+    }
+  }
+  .orgChart .director > li {
+    margin-top: -30px;
+  }
+  @media screen and (max-width: 767px) {
+    .orgChart .director > li {
+      margin-top: 0;
+    }
+  }
+  .orgChart .director > li > a {
+    position: relative;
+  }
+  .orgChart .director > li > a:before {
+    content: "";
+    position: absolute;
+    left: calc(50% - 1px);
+    top: 100%;
+    width: 3px;
+    height: 30px;
+    background-color: #dbb3a5;
+  }
+  @media screen and (max-width: 767px) {
+    .orgChart .director > li > a:before {
+      content: none;
+    }
+  }
+  .orgChart .subdirector {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .orgChart .subdirector:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(50% - 1px);
+    width: 3px;
+    height: 100%;
+    background-color: #dbb3a5;
+  }
+  @media screen and (max-width: 767px) {
+    .orgChart .subdirector:before {
+      content: none;
+    }
+  }
+  .orgChart .subdirector > li {
+    flex-shrink: 1;
+    flex-basis: calc(25% - 15px);
+  }
+  .orgChart .subdirector > li:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #dbb3a5;
+  }
+  @media screen and (min-width: 768px) {
+    .orgChart .subdirector > li:nth-of-type(4n + 1):before {
+      width: 50%;
+      left: 50%;
+    }
+    .orgChart .subdirector > li:nth-of-type(4n + 1):last-of-type:before {
+      width: calc(150% + 30px);
+    }
+    .orgChart .subdirector > li:nth-of-type(4n + 2) {
+      margin-right: 30px;
+    }
+    .orgChart .subdirector > li:nth-of-type(4n + 2):before {
+      width: calc(100% + 30px);
+    }
+    .orgChart .subdirector > li:nth-of-type(4n + 3) {
+      margin-left: 30px;
+    }
+    .orgChart .subdirector > li:nth-of-type(4n + 3):before {
+      width: calc(100% + 30px);
+      left: -30px;
+    }
+    .orgChart .subdirector > li:nth-of-type(4n + 3):last-of-type:before {
+      width: calc(50% + 30px);
+    }
+    .orgChart .subdirector > li:nth-of-type(4n):before {
+      width: 50%;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .orgChart .subdirector > li:last-of-type:before {
+      height: calc(100% + 15px) !important;
+    }
+  }
+  .orgChart .subdirector > li a {
+    position: relative;
+  }
+  .orgChart .subdirector > li a:before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 50%;
+    height: 30px;
+    border-right: 3px dotted #dbb3a5;
+  }
+  @media screen and (max-width: 767px) {
+    .orgChart .subdirector > li a:before {
+      border-right: none;
+      border-bottom: 3px dotted #dbb3a5 !important;
+    }
+  }
+  .orgChart .subdirector > li a {
+    background-color: #655d51;
+  }
+  .orgChart .subdirector > li .inner {
+    margin-top: -30px;
+  }
+  @media screen and (max-width: 767px) {
+    .orgChart .subdirector > li .inner {
+      margin-top: 0;
+    }
+  }
+  .orgChart .subdirector > li .inner > li {
+    flex-grow: 1;
+  }
+  .orgChart .department {
+    position: relative;
+  }
+  .orgChart .department > li {
+    flex: 1 1 10%;
+  }
+  .orgChart .department > li:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #dbb3a5;
+  }
+  @media screen and (min-width: 768px) {
+    .orgChart .department > li:first-of-type:before, .orgChart .department > li:last-of-type:before {
+      width: 50%;
+    }
+    .orgChart .department > li:first-of-type::before {
+      left: auto;
+      right: 0;
+    }
+  }
+  .orgChart .department > li > a {
+    position: relative;
+  }
+  .orgChart .department > li > a:before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    height: 30px;
+    width: 50%;
+    border-left: 3px solid #dbb3a5;
+  }
+  .orgChart .department > li > a {
+    background-color: #73abe3;
+  }
+  .orgChart .department li.mission > a:before {
+    border-left: 3px dotted #dbb3a5;
+  }
+  .orgChart .department li.mission a {
+    background-color: #b3d1f0;
+  }
+  @media screen and (max-width: 767px) {
+    .orgChart .department li.mission a:before {
+      border-bottom-style: dotted;
+      border-left: 0;
+    }
+  }
+  .orgChart .section {
+    flex-direction: column;
+  }
+  .orgChart .section:last-of-type {
+    float: left;
+    width: 100%;
+  }
+  .orgChart .section > li {
+    padding: 0 0 0 25px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  @media screen and (max-width: 767px) {
+    .orgChart .section > li {
+      padding: 0;
+    }
+  }
+  .orgChart .section > li:before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: -10px;
+    width: 15px;
+    height: calc(100% + 10px);
+    border-left: 3px solid #dbb3a5;
+  }
+  .orgChart .section > li:first-of-type:before {
+    height: calc(100% + 30px);
+    top: -30px;
+  }
+  @media screen and (max-width: 767px) {
+    .orgChart .section > li:first-of-type:before {
+      height: calc(100% + 15px);
+      top: -15px;
+    }
+  }
+  .orgChart .section > li:last-of-type:before {
+    height: calc(50% + 30px);
+    top: -30px;
+  }
+  @media screen and (max-width: 767px) {
+    .orgChart .section > li:last-of-type:before {
+      height: calc(100% + 15px);
+      top: -15px;
+    }
+  }
+  .orgChart .section > li > a {
+    min-height: 76px;
+    margin-bottom: 0;
+    background-color: #b3d1f0;
+    font-size: 0.938em;
+    position: relative;
+  }
+  .orgChart .section > li > a:before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 50%;
+    top: -3px;
+    left: -15px;
+    border-bottom: 3px dotted #dbb3a5 !important;
+  }
+  .startime {
+    display: block;
+    white-space: nowrap;
+  }
+  @media screen and (max-width: 767px) {
+    .startime {
+      display: inline-block;
+      font-size: 1.125em;
+      font-weight: bold;
+      margin-top: 1em;
+      margin-left: 1em;
+    }
+  }
+  .endtime {
+    display: block;
+    position: relative;
+    padding-top: 2em;
+    white-space: nowrap;
+  }
+  @media screen and (max-width: 767px) {
+    .endtime {
+      padding-top: 0;
+      display: inline-block;
+      font-size: 1.125em;
+      font-weight: bold;
+    }
+  }
+  .endtime:before {
+    content: "---";
+    transform: rotate(90deg);
+    position: absolute;
+    left: 0.65em;
+    top: 0.25em;
+    letter-spacing: -2px;
+  }
+  @media screen and (max-width: 767px) {
+    .endtime:before {
+      content: " ~ ";
+      transform: rotate(0deg);
+      position: static;
+    }
+  }
+  .form_apply {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1em 2em;
+    margin-bottom: 1em;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  @media screen and (max-width: 767px) {
+    .form_apply {
+      padding: 1em;
+    }
+  }
+  .msgtxt {
+    text-align: center;
+    font-size: 2em;
+    padding: 2em 1em 4em;
   }
 }
 .colorA a:hover {

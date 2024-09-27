@@ -188,6 +188,7 @@ h3 {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
+    // align-items: stretch;
     align-items: flex-start;
   }
   li {
@@ -222,7 +223,7 @@ h3 {
         font-size: 0.875em;
         line-height: 1.5em;
         vertical-align: middle;
-        color: #666;
+        color: #555;
         a {
           color: #fff;
           display: inline-block;
@@ -428,13 +429,17 @@ h3 {
 }
 .rightBlock {
   display: flex;
+  flex-wrap: wrap;
   h3 {
     flex: 1 1 auto;
     border-left: solid 5px $colorPrimary;
     padding-left: 0.5em;
+    @include screen('mobile') {
+      flex: 1 1 100%;
+    }
   }
   .formGrp {
-    flex: 0 0 30%;
+    flex: 0 0 40%;
     label {
       display: none;
     }
@@ -443,7 +448,24 @@ h3 {
       width: calc(100% - 6em);
     }
     @include screen('mobile') {
-      flex: 0 0 60%;
+      flex: 1 1 100%;
+    }
+  }
+}
+.rightBlock2 {
+  display: flex;
+  justify-content: flex-end;
+  .formGrp {
+    flex: 0 0 40%;
+    label {
+      display: block;
+    }
+    select,
+    input {
+      width: calc(100% - 10em);
+    }
+    @include screen('tablet') {
+      flex: 1 1 auto !important;
     }
   }
 }
@@ -569,5 +591,102 @@ h3 {
     font-size: 1rem;
     margin: 1em 0;
     padding: 1em;
+  }
+  .btn {
+    &:hover,
+    &:focus-visible {
+    }
+  }
+}
+.searchbtn {
+  min-width: 10em;
+}
+
+.f_download {
+  margin: 2rem 0;
+  .col {
+    flex-basis: calc(100% / 2 - 15px);
+    max-width: calc(100% / 2 - 15px);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.15);
+    @include screen('mobile') {
+      flex-basis: calc(100% - 15px);
+      max-width: calc(100% - 15px);
+      margin-bottom: 2rem;
+    }
+    &:nth-child(1) {
+      background: url(../images/f_download_bg1.png) no-repeat left top;
+      background-size: auto 10em;
+    }
+    &:nth-child(2) {
+      background: url(../images/f_download_bg2.png) no-repeat left top;
+      background-size: auto 9em;
+    }
+  }
+  h3 {
+    border: none;
+    padding: 0;
+    color: $colorPrimary;
+    margin: 10rem 1rem 0.5rem;
+  }
+  ul {
+    list-style: none;
+    margin: 1rem 1rem 2rem;
+    padding: 0;
+    li {
+      position: relative;
+      a {
+        display: block;
+        padding: 0.6rem 1.5rem 0.6rem 0.2rem;
+        border-bottom: solid 1px #d3d3d3;
+        font-weight: bold;
+        color: $colorWord;
+        &:after {
+          content: '';
+          width: 6px;
+          height: 6px;
+          display: inline-block;
+          margin-left: 0.5em;
+          vertical-align: middle;
+          border: 2px solid lighten($colorWord, 20);
+          transform: rotate(45deg);
+          border-bottom: none;
+          border-left: none;
+          margin-bottom: 0.3em;
+          z-index: 1;
+          position: absolute;
+          right: 0.5rem;
+          top: 1.1rem;
+        }
+        &:hover,
+        &:focus-visible {
+          color: $aHover;
+        }
+      }
+    }
+  }
+}
+.events {
+  .formGrp {
+    flex-wrap: nowrap;
+    display: flex;
+    @include screen('mobile') {
+      flex-wrap: wrap;
+    }
+    label {
+      flex: 0 0 6em;
+      margin: 0;
+    }
+    select {
+      flex: 1 1 auto;
+      @include screen('tablet') {
+        flex: 1 1 calc(100% - 12em);
+        max-width: 60%;
+      }
+      @include screen('mobile') {
+        flex: 1 1 calc(100% - 5em);
+        max-width: 60%;
+      }
+    }
   }
 }

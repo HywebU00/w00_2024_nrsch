@@ -128,13 +128,13 @@
 .btnSecondary {
   background: #fff;
   color: darken($colorPrimary, 15);
-  border: solid 1px $colorPrimary;
+  border: solid 1px #ccc;
   text-shadow: none;
   &:hover,
   &:focus-visible {
     color: darken($colorPrimary, 30);
-    background: #b5deff;
-    border: solid 1px #b5deff;
+    background: #ddd;
+    border: solid 1px #ccc;
   }
 }
 // 一般按鈕

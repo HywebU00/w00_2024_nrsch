@@ -19,8 +19,10 @@ $colorGray: #ccc;
 $colorGray2: #e8e8e8;
 $colorDark: #333333;
 $colorHr: #666; //hr顏色
+$colorLightGray: #ececec;
 $colorWord: #251f0c; //一般字的顏色
 $btnWordColor: #222; //按鈕字的顏色
+$colorLine: mix($colorPrimary, #fff, 45%);
 // 連結顏色
 $aColor: #434e0d;
 $aHover: mix($colorPrimary, #000, 90%);

@@ -519,9 +519,10 @@
 .innerPageSearch {
   position: fixed;
   margin-top: -1000px;
+
   @include screen('mobile') {
-    position: fixed;
-    top: 60px;
+    position: absolute;
+    top: -15px;
     margin-top: 0;
   }
 }
