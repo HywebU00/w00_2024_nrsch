@@ -7573,8 +7573,8 @@ img {
     box-sizing: border-box;
   }
   .pagination .page li a {
-    min-width: 36px;
-    height: 36px;
+    min-width: 38px;
+    height: 38px;
     border-radius: 50%;
     padding: 6px 10px;
     font-weight: 700;
@@ -11647,6 +11647,9 @@ img {
     text-align: center;
     font-size: 2em;
     padding: 2em 1em 4em;
+  }
+  .msgtxt p {
+    line-height: 1.6em;
   }
 }
 .colorA a:hover {
