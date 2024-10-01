@@ -231,6 +231,7 @@
   background: #fff url(../images/paperbg01.png);
   padding: 1em 2em;
   margin-bottom: 1em;
+  position: relative;
   @include screen('mobile') {
     padding: 1em 15px;
   }

@@ -211,13 +211,12 @@
             <nav aria-label="Breadcrumb" class="breadcrumb">
               <ul>
                 <li><a href="#">首頁</a></li>
-                <li><a href="#">分眾專區</a></li>
-                <li><a href="#">志工業務</a></li>
-                <li aria-current="page">申請志工表格</li>
+                <li><a href="#">交流天地</a></li>
+                <li aria-current="page">民意信箱</li>
               </ul>
             </nav>
             <!-- h2節點 -->
-            <h2 class="title">志工業務</h2>
+            <h2 class="title">民意信箱</h2>
             <!-- functionPanel -->
             <div class="functionPanel">
               <div class="function">
@@ -230,67 +229,102 @@
               </div>
             </div>
             <!-- functionPanel end-->
-            <!-- category -->
-            <div class="category">
-              <ul>
-                <li><a href="#" class="active">申請志工表格</a></li>
-              </ul>
-            </div>
-            <!-- category end-->
-            <!-- CP Start -->
-            <section class="cp">
-              <div class="flexForm rightBlock">
-                <h3>公用表格</h3>
-                <div class="formGrp formInline">
-                  <label for="selectSample">選單</label>
-                  <select name="" id="selectSample">
-                    <option value="">社工科</option>
-                    <option value="">選項二</option>
-                    <option value="">選項三</option>
-                    <option value="">選項四</option>
-                  </select>
-                  <button type="button" class="btn btnPrimary">送出</button>
+            <!-- form_service -->
+            <section class="form_service">
+              <p>民意信箱表格填寫此符號 (<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>為必填項目)</p>
+              <div class="flexForm formGrid">
+                <div class="formGrp">
+                  <!-- 使用aria-required屬性指出必填的表單欄位 -->
+                  <label for="username" class="formTitle" aria-required="true">姓名<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                  <div class="formContent">
+                    <input type="text" id="username" value="請填寫姓名" title="請填寫姓名" />
+                  </div>
                 </div>
-              </div>
-              <p>請點選下載「申請志工表格」，相關資料請您填寫正確資訊，再email檔案回寄至<a href="mailto:n116@nrsch.mohw.gov.tw">n116@nrsch.mohw.gov.tw</a>，我們會盡快與您連繫，謝謝您</p>
-              <!-- file download 檔案下載 -->
-              <div class="fileDownload">
-                <h3>下載檔案</h3>
-                <ul>
-                  <li>
-                    <span class="fileName">工作手冊(112年12月修正)</span>
-                    <span class="file_pdf"><a href="xxxx.pdf">pdf</a>823.8 KB，下載 1,489 次</span>
-                  </li>
-                  <li>
-                    <span class="fileName">危機事件通報單</span>
-                    <span class="file_pdf"><a href="xxxx.pdf">pdf</a>823.8 KB，下載 1,489 次</span>
-                  </li>
-                  <li>
-                    <span class="fileName">危機通報聯繫表</span>
-                    <span class="file_doc"><a href="xxxx.doc">doc</a>823.8 KB，下載 1,489 次</span>
-                  </li>
-                  <li>
-                    <span class="fileName">危機事件通報單</span>
-                    <span class="file_pdf"><a href="xxxx.pdf">pdf</a>823.8 KB，下載 1,489 次</span>
-                  </li>
-                  <li>
-                    <span class="fileName">危機事件通報單</span>
-                    <span class="file_pdf"><a href="xxxx.pdf">pdf</a>823.8 KB，下載 1,489 次</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="int">
-                <p>以上連結將另存下載檔案。「為提供使用者文書軟體選擇的權利，如文件為ODF開放文件格式， 建議您安裝免費開源軟體(<a href="http://zh-tw.libreoffice.org/download/libreofficestill/" target="_blank" title="LibreOffice另開新視窗">LibreOffice</a>)或以您慣用的軟體開啟文件。」</p>
+                <div class="formGrp">
+                  <label for="email" class="formTitle" aria-required="true">您的E-mail<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                  <div class="formContent">
+                    <div class="input_i">
+                      <input name="email" type="email" id="email" title="請輸入您的E-mail" />
+                      <i class="i_mail_dark"></i>
+                    </div>
+                    <div class="noticeWarning">
+                      這似乎不是一個正常的Email格式
+                      <a role="button" href="#" aria-label="關閉" class="close"><img src="images/basic/icon_close.svg" alt="" /></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="formGrp">
+                  <!-- 使用aria-required屬性指出必填的表單欄位 -->
+                  <label for="username" class="formTitle" aria-required="true">聯絡電話<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                  <div class="formContent">
+                    <input type="text" id="username" value="請填寫聯絡電話" title="請填寫聯絡電話" />
+                  </div>
+                </div>
+                <div class="formGrp">
+                  <label for="" class="formTitle" aria-required="false">聯絡地址</label>
+                  <div class="formContent formInline address">
+                    <label for="postalcode">郵遞區號</label><input name="" type="text" id="postalcode" value="" class="postalcode" title="請輸入郵遞區號" />
+                    <label for="city">縣市</label>
+                    <select name="" id="city">
+                      <option value="">台北市</option>
+                      <option value="">新北市</option>
+                      <option value="">桃園市</option>
+                      <option value="">新竹市</option>
+                      <option value="">...</option>
+                    </select>
+                    <select name="" id="">
+                      <option value="">中正區</option>
+                      <option value="">大安區</option>
+                      <option value="">信義區</option>
+                      <option value="">北投區</option>
+                      <option value="">...</option>
+                    </select>
+                    <input name="" type="text" value="" title="請輸入詳細地址" />
+                  </div>
+                </div>
+                <div class="formGrp">
+                  <!-- 使用aria-required屬性指出必填的表單欄位 -->
+                  <label for="username" class="formTitle" aria-required="true">意見標題<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                  <div class="formContent">
+                    <input type="text" id="username" value="請填寫意見標題" title="請填寫意見標題" />
+                  </div>
+                </div>
+                <div class="formGrp">
+                  <!-- 使用aria-required屬性指出必填的表單欄位 -->
+                  <label for="username" class="formTitle" aria-required="true">意見內容<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                  <div class="formContent">
+                    <textarea name="" id="username" cols="30" rows="10"></textarea>
+                  </div>
+                </div>
+
+                <div class="formGrp">
+                  <!-- 使用aria-required屬性指出必填的表單欄位 -->
+                  <label for="username" class="formTitle" aria-required="false">檔案上傳</label>
+                  <div class="formContent">
+                    <div class="uploadGrp">
+                      <input class="upload_file" type="text" title="檔案名稱" readonly="" />
+                      <div class="uploadBtn">
+                        <span>請選擇檔案</span>
+                        <input type="file" class="check_file" title="請選擇檔案" multiple="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- int -->
+                <div class="int">
+                  <p>說明： 可上傳的檔案類型限（PDF、JPG、ODF等），如果有多個檔案請壓縮後再上傳，檔案總大小不可超過10MB。</p>
+                </div>
+                <!-- int end-->
+                <div class="btnGrp formInline">
+                  <button type="button" class="btn btnReset">清除重填</button>
+                  <button type="button" class="btn btnSubmit">確定送出</button>
+                </div>
+                <!-- protect -->
+                <div class="protect"><img src="images/key.png" alt="保護機制" /></div>
               </div>
             </section>
-            <!-- CP End -->
-            <!-- publishInfo -->
-            <ul class="publishInfo">
-              <li>點閱：7518</li>
-              <li>資料更新：2023/01/17 08:50</li>
-              <li>資料維護：衛生福利部北區老人之家</li>
-            </ul>
-            <!-- publishInfo end-->
+            <!-- form_service end -->
           </div>
         </div>
       </main>

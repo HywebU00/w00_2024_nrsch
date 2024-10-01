@@ -297,16 +297,20 @@
   }
   @media screen and (min-width: 1700px) {
     padding-bottom: 0;
+    height: 620px;
   }
   @include screen('notebook') {
     padding-bottom: 20px;
+    height: 540px;
   }
   @include screen('tablet') {
     padding-bottom: 10px;
+    height: auto;
   }
   @include screen('mobile') {
     background: linear-gradient(180deg, rgba(221, 225, 106, 1) 0%, rgba(221, 225, 106, 1) 60%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0) 100%);
-    padding-bottom: 50px;
+    padding-bottom: 30px;
+    height: auto;
   }
   & > .container {
     max-width: $containerMax;

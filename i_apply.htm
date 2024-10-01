@@ -32,12 +32,20 @@
         <!-- form_service -->
         <div class="form_apply">
           <p>活動報名表格填寫此符號 (<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>為必填項目)</p>
+
           <div class="flexForm formGrid">
             <div class="formGrp">
               <!-- 使用aria-required屬性指出必填的表單欄位 -->
-              <label for="username" class="formTitle" aria-required="true">活動地點<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+              <label for="username" class="formTitle" aria-required="false">報名場次</label>
               <div class="formContent">
-                <input type="text" id="username" value="112年度老人福利機構專業人員在職訓練2024/06/20~2024/06/23" title="112年度老人福利機構專業人員在職訓練2024/06/20~2024/06/23" />
+                <input type="text" id="username" value="111年度老人福利機構失智症照顧專區專業人員在職訓練(第二梯次111年10月22.29.30日)" disabled />
+              </div>
+            </div>
+            <div class="formGrp">
+              <!-- 使用aria-required屬性指出必填的表單欄位 -->
+              <label for="username" class="formTitle" aria-required="false">申請日期</label>
+              <div class="formContent">
+                <input type="text" id="username" value="2024/09/04" disabled />
               </div>
             </div>
             <div class="formGrp">
@@ -59,16 +67,50 @@
             </div>
             <div class="formGrp">
               <!-- 使用aria-required屬性指出必填的表單欄位 -->
+              <label for="username" class="formTitle" aria-required="true">出生年月日<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+              <div class="formContent">
+                <input name="" type="date" value="" placeholder="請選擇日期" title="請選擇日期" />
+              </div>
+            </div>
+            <div class="formGrp">
+              <!-- 使用aria-required屬性指出必填的表單欄位 -->
               <label for="username" class="formTitle" aria-required="true">身分證號<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
               <div class="formContent">
                 <input type="text" id="username" value="請填寫身分證號" title="請填寫身分證號" />
               </div>
             </div>
+            <div class="formGrp" role="group" aria-labelledby="fake-legend" aria-required="true">
+              <label class="formTitle">學歷<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+              <div class="formContent" id="fake-legend">
+                <div class="radioGrp formInline">
+                  <label> <input type="radio" name="sampleRadio6" value="" title="國小" />國小</label>
+                  <label> <input type="radio" name="sampleRadio6" value="" title="國中" />國中</label>
+                  <label> <input type="radio" name="sampleRadio6" value="" title="高中(職)" />高中(職)</label>
+                  <label> <input type="radio" name="sampleRadio6" value="" title="專科" />專科</label>
+                  <label> <input type="radio" name="sampleRadio6" value="" title="大學" />大學</label>
+                  <label> <input type="radio" name="sampleRadio6" value="" title="碩士及以上" />碩士及以上</label>
+                </div>
+              </div>
+            </div>
             <div class="formGrp">
               <!-- 使用aria-required屬性指出必填的表單欄位 -->
-              <label for="username" class="formTitle" aria-required="true">行動電話<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+              <label for="username" class="formTitle" aria-required="true">服務單位<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
               <div class="formContent">
-                <input type="text" id="username" value="請填寫行動電話" title="請填寫行動電話" />
+                <input type="text" id="username" value="請填寫服務單位" title="請填寫服務單位" />
+              </div>
+            </div>
+            <div class="formGrp">
+              <!-- 使用aria-required屬性指出必填的表單欄位 -->
+              <label for="username" class="formTitle" aria-required="true">服務單位電話<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+              <div class="formContent">
+                <input type="text" id="username" value="請填寫服務單位電話" title="請填寫服務單位電話" />
+              </div>
+            </div>
+            <div class="formGrp">
+              <!-- 使用aria-required屬性指出必填的表單欄位 -->
+              <label for="username" class="formTitle" aria-required="true">職稱<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+              <div class="formContent">
+                <input type="text" id="username" value="請填寫職稱" title="請填寫職稱" />
               </div>
             </div>
             <div class="formGrp">
@@ -84,18 +126,83 @@
                 </div>
               </div>
             </div>
-
             <div class="formGrp">
               <!-- 使用aria-required屬性指出必填的表單欄位 -->
-              <label for="username" class="formTitle" aria-required="false">參加人數</label>
+              <label for="username" class="formTitle" aria-required="true">聯絡電話/行動電話<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
               <div class="formContent">
-                <select name="" id="">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                </select>
+                <input type="text" id="username" value="請填寫聯絡電話/行動電話" title="請填寫聯絡電話/行動電話" />
               </div>
             </div>
+            <div class="formGrp">
+              <label for="" class="formTitle">聯絡地址</label>
+              <div class="formContent formInline address">
+                <label for="postalcode">郵遞區號</label><input name="" type="text" id="postalcode" value="" class="postalcode" title="請輸入郵遞區號" />
+                <label for="city">縣市</label>
+                <select name="" id="city">
+                  <option value="">台北市</option>
+                  <option value="">新北市</option>
+                  <option value="">桃園市</option>
+                  <option value="">新竹市</option>
+                  <option value="">...</option>
+                </select>
+                <select name="" id="">
+                  <option value="">中正區</option>
+                  <option value="">大安區</option>
+                  <option value="">信義區</option>
+                  <option value="">北投區</option>
+                  <option value="">...</option>
+                </select>
+                <input name="" type="text" value="" title="請輸入詳細地址" />
+              </div>
+            </div>
+            <div class="formGrp">
+              <div for="" class="formTitle">證書寄送地址</div>
+              <div class="formContent formInline address">
+                <label for="" class="labelHidden">縣市</label>
+                <label for="" class="labelHidden">詳細地址</label>
+                <input name="" type="text" value="" title="請輸入詳細地址" />
+                <div class="checkbox">
+                  <label><input type="checkbox" title="同上聯絡地址" />同上聯絡地址</label>
+                </div>
+              </div>
+            </div>
+            <div class="formGrp" role="group" aria-labelledby="fake-legend" aria-required="true">
+              <label class="formTitle">用膳<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+              <div class="formContent" id="fake-legend">
+                <div class="radioGrp formInline">
+                  <label> <input type="radio" name="sampleRadio6" value="" title="葷" />葷</label>
+                  <label> <input type="radio" name="sampleRadio6" value="" title="素" />素</label>
+                </div>
+              </div>
+            </div>
+            <div class="formGrp" role="group" aria-labelledby="fake-legend" aria-required="true">
+              <label class="formTitle">是否需公務人員時數登錄<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+              <div class="formContent" id="fake-legend">
+                <div class="radioGrp formInline">
+                  <label> <input type="radio" name="sampleRadio6" value="" title="否" />否</label>
+                  <label> <input type="radio" name="sampleRadio6" value="" title="需要" />需要</label>
+                </div>
+              </div>
+            </div>
+            <div class="formGrp" role="group" aria-labelledby="fake-legend" aria-required="true">
+              <label class="formTitle">是否需社工師繼續教育積分認證<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+              <div class="formContent" id="fake-legend">
+                <div class="radioGrp formInline">
+                  <label> <input type="radio" name="sampleRadio6" value="" title="否" />否</label>
+                  <label> <input type="radio" name="sampleRadio6" value="" title="需要" />需要</label>
+                </div>
+              </div>
+            </div>
+            <div class="formGrp" role="group" aria-labelledby="fake-legend" aria-required="true">
+              <label class="formTitle">是否需長照人員繼續教育積分認證<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+              <div class="formContent" id="fake-legend">
+                <div class="radioGrp formInline">
+                  <label> <input type="radio" name="sampleRadio6" value="" title="否" />否</label>
+                  <label> <input type="radio" name="sampleRadio6" value="" title="需要" />需要</label>
+                </div>
+              </div>
+            </div>
+
             <div class="formGrp">
               <!-- 使用aria-required屬性指出必填的表單欄位 -->
               <label for="username" class="formTitle" aria-required="false">驗證碼</label>

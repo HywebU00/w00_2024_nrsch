@@ -151,6 +151,35 @@ select::-ms-expand {
       margin: 0 0.3em 0.3em 0.3em;
       width: calc(100% - 0.6em);
     }
+    // 地址專屬
+    &.address {
+      .postalcode {
+        flex: 0 0 5em !important;
+        max-width: 5em;
+      }
+      select {
+        min-width: 100px;
+
+        option {
+          text-align: center;
+        }
+
+        @include screen('xsMobile') {
+          width: 100px;
+          display: inline-block;
+        }
+      }
+
+      input[type='text'] {
+        //width: calc(100% - 231px) ;
+        flex: 1 1 auto;
+
+        @include screen('mobile') {
+          display: block;
+          width: calc(100% - 0.6em);
+        }
+      }
+    }
 
     //有條件式表單
     &.additional {
@@ -173,6 +202,31 @@ select::-ms-expand {
       font-size: 0.813em;
       color: #888;
       padding: 0 0.5em;
+    }
+    // 地址專屬
+    .address {
+      select {
+        min-width: 100px;
+
+        option {
+          text-align: center;
+        }
+
+        @include screen('xsMobile') {
+          width: 100px;
+          display: inline-block;
+        }
+      }
+
+      input[type='text'] {
+        //width: calc(100% - 231px) ;
+        flex: 1 1 auto;
+
+        @include screen('mobile') {
+          display: block;
+          width: calc(100% - 0.6em);
+        }
+      }
     }
 
     // 第二層的設定
@@ -1078,7 +1132,7 @@ select::-ms-expand {
 
   label {
     vertical-align: middle;
-    margin: 0 0.5em 0 0;
+    margin: 0;
     flex: 0 1 auto;
     display: flex;
     align-items: center;
@@ -1342,7 +1396,7 @@ input[type='checkbox']:focus {
 
 //---------------------------------------------readonly disable -------//
 // input[readonly],
-// input[disable] {
+// input[disabled] {
 //     background: lighten($colorGray, 15);
 //     color: darken($colorGray, 10);
 //     border-color: darken($colorGray, 10);
@@ -1364,7 +1418,7 @@ input[type='checkbox']:focus {
   position: relative;
 
   input[readonly],
-  input[disable] {
+  input[disabled] {
     background: transparent;
     color: #666;
   }

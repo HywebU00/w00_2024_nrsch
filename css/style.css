@@ -172,10 +172,6 @@ img {
     -webkit-appearance: button;
     cursor: pointer;
   }
-  button[disabled],
-  html input[disabled] {
-    cursor: default;
-  }
   button::-moz-focus-inner,
   input::-moz-focus-inner {
     border: 0;
@@ -3157,13 +3153,13 @@ img {
   }
   .disabled,
   [disabled] {
-    opacity: 0.5;
+    opacity: 0.8;
     cursor: not-allowed;
     text-shadow: none;
   }
   .readonly,
   [readonly] {
-    opacity: 0.5;
+    opacity: 0.8;
     cursor: not-allowed;
     text-shadow: none;
   }
@@ -4397,22 +4393,26 @@ img {
   @media screen and (min-width: 1700px) {
     .header.typeB {
       padding-bottom: 0;
+      height: 620px;
     }
   }
   @media screen and (max-width: 1399px) {
     .header.typeB {
       padding-bottom: 20px;
+      height: 540px;
     }
   }
   @media screen and (max-width: 991px) {
     .header.typeB {
       padding-bottom: 10px;
+      height: auto;
     }
   }
   @media screen and (max-width: 767px) {
     .header.typeB {
       background: linear-gradient(180deg, rgb(221, 225, 106) 0%, rgb(221, 225, 106) 60%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0) 100%);
-      padding-bottom: 50px;
+      padding-bottom: 30px;
+      height: auto;
     }
   }
   .header.typeB > .container {
@@ -5279,8 +5279,8 @@ img {
     margin: 0 0.5em 0.5em 0;
   }
   .flexForm .formTitle {
-    max-width: 12em;
-    flex: 0 0 12em;
+    max-width: 14em;
+    flex: 0 0 14em;
     align-self: flex-start;
     padding: 0.3em 1em;
   }
@@ -5297,8 +5297,8 @@ img {
     }
   }
   .flexForm .formTitle + .formContent[class*=formCol] {
-    flex-basis: calc(100% - 12em);
-    max-width: calc(100% - 12em);
+    flex-basis: calc(100% - 14em);
+    max-width: calc(100% - 14em);
     padding-top: 0;
     position: relative;
     min-height: 1px;
@@ -5319,9 +5319,9 @@ img {
   }
   .flexForm .formContent {
     display: flex;
-    max-width: calc(100% - 12em);
+    max-width: calc(100% - 14em);
     flex: auto;
-    flex-basis: calc(100% - 12em);
+    flex-basis: calc(100% - 14em);
     position: relative;
     min-height: 1px;
     overflow: hidden;
@@ -5347,6 +5347,31 @@ img {
     margin: 0 0.3em 0.3em 0.3em;
     width: calc(100% - 0.6em);
   }
+  .flexForm .formContent.address .postalcode {
+    flex: 0 0 5em !important;
+    max-width: 5em;
+  }
+  .flexForm .formContent.address select {
+    min-width: 100px;
+  }
+  .flexForm .formContent.address select option {
+    text-align: center;
+  }
+  @media screen and (max-width: 575px) {
+    .flexForm .formContent.address select {
+      width: 100px;
+      display: inline-block;
+    }
+  }
+  .flexForm .formContent.address input[type=text] {
+    flex: 1 1 auto;
+  }
+  @media screen and (max-width: 767px) {
+    .flexForm .formContent.address input[type=text] {
+      display: block;
+      width: calc(100% - 0.6em);
+    }
+  }
   .flexForm .formContent.additional {
     flex-wrap: nowrap;
     align-items: center;
@@ -5364,6 +5389,27 @@ img {
     font-size: 0.813em;
     color: #888;
     padding: 0 0.5em;
+  }
+  .flexForm .formContent .address select {
+    min-width: 100px;
+  }
+  .flexForm .formContent .address select option {
+    text-align: center;
+  }
+  @media screen and (max-width: 575px) {
+    .flexForm .formContent .address select {
+      width: 100px;
+      display: inline-block;
+    }
+  }
+  .flexForm .formContent .address input[type=text] {
+    flex: 1 1 auto;
+  }
+  @media screen and (max-width: 767px) {
+    .flexForm .formContent .address input[type=text] {
+      display: block;
+      width: calc(100% - 0.6em);
+    }
   }
   .flexForm .formContent .formGrp {
     flex: 0 0 100%;
@@ -6167,7 +6213,7 @@ img {
   }
   .formInline label {
     vertical-align: middle;
-    margin: 0 0.5em 0 0;
+    margin: 0;
     flex: 0 1 auto;
     display: flex;
     align-items: center;
@@ -6415,7 +6461,7 @@ img {
     position: relative;
   }
   .uploadGrp input[readonly],
-  .uploadGrp input[disable] {
+  .uploadGrp input[disabled] {
     background: transparent;
     color: #666;
   }
@@ -11160,6 +11206,7 @@ img {
     background: #fff url(../images/paperbg01.png);
     padding: 1em 2em;
     margin-bottom: 1em;
+    position: relative;
   }
   @media screen and (max-width: 767px) {
     .serviceApply {
