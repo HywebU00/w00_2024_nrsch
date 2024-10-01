@@ -4268,6 +4268,7 @@ img {
     padding: 0;
     box-sizing: border-box;
     z-index: 99999;
+    font-size: 0em;
   }
   @media screen and (max-width: 767px) {
     .header h1 {
