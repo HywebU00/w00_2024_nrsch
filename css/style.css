@@ -4919,6 +4919,9 @@ img {
   footer .footerLogo {
     flex: 0 1 240px;
   }
+  footer .footerLogo a {
+    font-size: 0;
+  }
   footer .footerInfo {
     flex: 1 1 auto;
     padding: 0 2em;
@@ -4932,6 +4935,9 @@ img {
   footer .footerIcon {
     flex: 0 1 200px;
     text-align: right;
+  }
+  footer .footerIcon a {
+    font-size: 0;
   }
   @media screen and (max-width: 991px) {
     footer .footerIcon {
@@ -8721,7 +8727,7 @@ img {
     cursor: pointer;
     top: 45%;
     transform: translateY(-50%);
-    padding: 15px 10px;
+    padding: 22px 10px 15px;
     margin: 0;
     border-radius: 0;
     background: rgba(0, 0, 0, 0.8);
@@ -8730,6 +8736,7 @@ img {
     width: 72px;
     height: 72px;
     border-radius: 50%;
+    font-size: 0;
   }
   @media screen and (min-width: 1700px) {
     .swiperArrow {
