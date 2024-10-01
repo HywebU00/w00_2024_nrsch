@@ -134,33 +134,32 @@
               </div>
             </div>
             <div class="formGrp">
-              <label for="" class="formTitle">聯絡地址</label>
+              <label for="city area" class="formTitle">聯絡地址</label>
               <div class="formContent formInline address">
                 <label for="postalcode">郵遞區號</label><input name="" type="text" id="postalcode" value="" class="postalcode" title="請輸入郵遞區號" />
-                <label for="city area">縣市</label>
-                <select name="" id="city">
+                <label for="city area address">縣市</label>
+                <select name="" id="city" aria-label="請選擇縣市">
                   <option value="">台北市</option>
                   <option value="">新北市</option>
                   <option value="">桃園市</option>
                   <option value="">新竹市</option>
                   <option value="">...</option>
                 </select>
-                <select name="" id="area">
+                <select name="" id="area" aria-label="請選擇區域">
                   <option value="">中正區</option>
                   <option value="">大安區</option>
                   <option value="">信義區</option>
                   <option value="">北投區</option>
                   <option value="">...</option>
                 </select>
-                <input name="" type="text" value="" title="請輸入詳細地址" />
+                <input name="" type="text" id="address" value="請輸入詳細地址" title="請輸入詳細地址" />
               </div>
             </div>
             <div class="formGrp">
               <div for="" class="formTitle">證書寄送地址</div>
               <div class="formContent formInline address">
-                <label for="" class="labelHidden">縣市</label>
-                <label for="" class="labelHidden">詳細地址</label>
-                <input name="" type="text" value="" title="請輸入詳細地址" />
+                <label for="addr" class="labelHidden">詳細地址</label>
+                <input name="" type="text" id="addr" value="" title="請輸入詳細地址" />
                 <div class="checkbox">
                   <label><input type="checkbox" title="同上聯絡地址" />同上聯絡地址</label>
                 </div>
