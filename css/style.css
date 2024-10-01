@@ -7551,6 +7551,8 @@ img {
     height: 40px;
   }
   .marquee .swiperBox .marquee-arrow {
+    width: 10px;
+    height: 20px;
     padding: 0;
     position: absolute;
     cursor: pointer;
@@ -7560,6 +7562,7 @@ img {
     padding: 0;
     margin: 0;
     border: none;
+    font-size: 0;
   }
   .marquee .swiperBox .marquee-arrow::before {
     content: "";
