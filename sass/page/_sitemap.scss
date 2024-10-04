@@ -2,7 +2,7 @@
 .sitemap {
   margin: 0px auto 1em;
   p {
-    font-size: 0.813em;
+    font-size: 1em;
     kbd {
       border: 1px solid #aaa;
       background: transparent;
@@ -28,6 +28,7 @@
   border-top: 1px solid #ccc;
   @include gutter;
   box-sizing: border-box;
+  padding: 1em 0;
   ul {
     @include liReset;
   }
@@ -38,7 +39,7 @@
     vertical-align: top;
     margin: 0 -5px 1em 0; // margin-right:改為負5;
     box-sizing: border-box;
-    padding: 0px 0.5em;
+    padding: 0px 1em;
     a {
       margin: 0.2em 0;
       color: #222;

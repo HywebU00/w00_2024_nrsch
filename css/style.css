@@ -7870,7 +7870,7 @@ img {
     margin: 0px auto 1em;
   }
   .sitemap p {
-    font-size: 0.813em;
+    font-size: 1em;
   }
   .sitemap p kbd {
     border: 1px solid #aaa;
@@ -7898,6 +7898,7 @@ img {
     padding-right: 15px;
     box-sizing: border-box;
     box-sizing: border-box;
+    padding: 1em 0;
   }
   .cascading ul {
     margin: 0;
@@ -7906,12 +7907,12 @@ img {
   }
   .cascading li {
     line-height: 1.5;
-    width: 25%;
+    width: 33.3333333333%;
     display: inline-block;
     vertical-align: top;
     margin: 0 -5px 1em 0;
     box-sizing: border-box;
-    padding: 0px 0.5em;
+    padding: 0px 1em;
   }
   .cascading li a {
     margin: 0.2em 0;
